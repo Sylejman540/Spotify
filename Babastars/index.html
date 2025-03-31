@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="media/logo.png">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <title>Spotify</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="flex justify-between ml-10 mr-10">
+        <!-- Adding Logo -->
+        <a href="/index.html"><img src="media/logo.png" alt="Spotify" class="w-10 h-10 mt-5"></a>
+    <div class="flex gap-10 md:flex hidden">
+        <svg class="home-logo cursor-pointer" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+        </svg>
+        <div class="input-box">
+            <svg class="w-6 h-6 absolute mt-6 ml-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+            </svg>              
+            <input type="search" placeholder="What do you want to play?" class="w-80 h-10 mt-4 border-2 rounded-full px-10 cursor-pointer">
+        </div>
+    </div>
+    <div class="md:flex gap-5 hidden">    
+        <svg  class="w-6 h-6 mt-6 cursor-pointer" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
+        </svg>
+        <h1 class="text-gray-400 text-xl mt-6"><a href="https://www.spotify.com/us/download/ios/" target="_blank">Install App</a></h1>
+    </div>
+
+    <div class="flex md:hidden">
+        <button class="app-btn">Open App</button>
+    </div>
+
+    <div class="flex gap-5">
+        <svg class="w-6 h-6 mt-6 cursor-pointer hidden md:flex" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0" />
+        </svg>
+        <h1 class="header-h1 shadow-md mt-3 cursor-pointer"><a href="https://open.spotify.com/" target="_blank">S</a></h1>  
+    </div>
+    <div class="md:hidden block">
+        <svg class="w-8 h-8 mt-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+          </svg>
+     </div>
+    </header>
+    
+    <main>
+        <section class="md:flex gap-20 header mt-30">
+           <img src="media/babastart.jpg" alt="Unikatil" class="rounded-full w-100 h-100 mt-20 md:ml-20 ml-3 md:mb-10">
+           <div class="md:mt-40 mt-5 text-center md:text-start mb-5">
+              <div class="flex justify-center md:justify-start">
+                <svg  class="w-8 h-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 0 1-1.043 3.296 3.745 3.745 0 0 1-3.296 1.043A3.745 3.745 0 0 1 12 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 0 1-3.296-1.043 3.745 3.745 0 0 1-1.043-3.296A3.745 3.745 0 0 1 3 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 0 1 1.043-3.296 3.746 3.746 0 0 1 3.296-1.043A3.746 3.746 0 0 1 12 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 0 1 3.296 1.043 3.746 3.746 0 0 1 1.043 3.296A3.745 3.745 0 0 1 21 12Z" />
+                </svg>
+                <h3 class="text-2xl">Verified Artists</h3>
+              </div>                  
+              <h1 class="text-6xl font-bold uppercase mt-5">Babastars</h1>
+              <p class="mt-5 text-lg">50, 586 monthly listeners</p>
+           </div>
+        </section>
+
+        <article class="flex mt-10 gap-10 ml-10">
+            <img src="media/play.jpg" alt="PLAY" class="w-12 h-12">
+            <button class="follow-btn">Following</button>
+        </article>
+
+        <article class="ml-10 mt-20">
+            <h1 class="font-bold text-white text-3xl">Popular</h1>
+  
+            <div class="flex mt-10 justify-between mr-10 cursor-pointer ">
+                <div class="flex mt-5 gap-6">
+                  <h2 class="font-bold text-3xl mt-1">1</h2>
+                  <img src="media/babastart.jpg" alt="Unikatil" class="w-12 h-12 rounded-full">
+                  <h1 class="mt-2 md:font-bold text-2xl">Shpresoj</h1>
+                </div>
+
+                <h1 class="mt-10 font-bold text-xl text-gray-400 hidden md:flex mr-5">106K</h1>
+
+                <h1 class="md:mt-10 mt-8 font-bold text-xl text-gray-400">3:02</h1>
+            </div>
+
+            <div class="flex mt-5 justify-between mr-10 cursor-pointer">
+                <div class="flex mt-5 gap-6">
+                  <h2 class="font-bold text-3xl mt-1">2</h2>
+                  <img src="media/babastars(2).jpg" alt="Unikatil" class="w-12 h-12 rounded-full">
+                  <h1 class="mt-2 font-bold text-2xl">Ding Ding</h1>
+                </div>
+
+                <h1 class="mt-10 font-bold text-xl text-gray-400 mr-4 hidden md:flex">21,123,433</h1>
+
+                <h1 class="md:mt-10 mt-8 font-bold text-xl text-gray-400">2:41</h1>
+            </div>
+
+            <div class="flex mt-5 justify-between mr-10 cursor-pointer">
+                <div class="flex mt-5 gap-6">
+                  <h2 class="font-bold text-3xl mt-1">3</h2>
+                  <img src="media/babastars(3).jpg" alt="Unikatil" class="w-12 h-12 rounded-full">
+                  <h1 class="mt-2 font-bold text-2xl">Mari</h1>
+                </div>
+
+                <h1 class="mt-10 font-bold text-xl text-gray-400 ml-12 hidden md:flex">6,500,311</h1>
+
+                <h1 class="md:mt-10 mt-8 font-bold text-xl text-gray-400">3:05</h1>
+            </div>
+
+            <div class="flex mt-5 justify-between mr-10 cursor-pointer">
+                <div class="flex mt-5 gap-6">
+                  <h2 class="font-bold text-3xl mt-1">4</h2>
+                  <img src="media/babastars(3).jpg" alt="Unikatil" class="w-12 h-12 rounded-full">
+                  <h1 class="mt-2 font-bold text-2xl">Jem Njo</h1>
+                </div>
+
+                <h1 class="mt-10 font-bold text-xl text-gray-400 ml-2 hidden md:flex">2,315,142</h1>
+
+                <h1 class="md:mt-10 mt-8 font-bold text-xl text-gray-400">3:46</h1>
+            </div>
+
+            <div class="flex mt-5 justify-between mr-10 cursor-pointer">
+                <div class="flex mt-5 gap-6">
+                  <h2 class="font-bold text-3xl mt-1">5</h2>
+                  <img src="media/babastars(2).jpg" alt="Unikatil" class="w-12 h-12 rounded-full">
+                  <h1 class="mt-2 font-bold text-2xl">Ani Nasht</h1>
+                </div>
+
+                <h1 class="mt-10 font-bold text-xl text-gray-400 hidden md:flex">3,080,161</h1>
+
+                <h1 class="md:mt-10 mt-8 font-bold text-xl text-gray-400">3:55</h1>
+            </div>
+        </article>
+    </main>
+  
+    <div class="music-player mt-10 w-100  md:w-250 ml-3 mr-5 md:ml-70">
+    <!-- Updated image source to a valid image file -->
+    <div class="song-title">Tingulli i Trent</div>
+    <div class="artist">Ermal Fejzullahu ft Babastars</div>
+
+    <!-- Single audio element that will have its src updated -->
+    <audio id="song" src="media/Trent.mp3"></audio>
+
+    <div class="progress-container">
+      <span id="currentTime">0:00</span>
+      <span id="totalTime">0:00</span>
+    </div>
+    <input type="range" id="progress" value="0" class="progress-bar">
+
+    <div class="controls">
+      <button id="prevBtn"><i class="fas fa-backward"></i></button>
+      <button onclick="playPause()"><i id="ctrlIcon" class="fas fa-play"></i></button>
+      <button id="nextBtn"><i class="fas fa-forward"></i></button>
+    </div>
+  </div>
+
+
+  <footer class="md:flex justify-around mt-20">
+      <article class="grid text-center  md:mt-0 mt-3">
+          <h1 class="text-xl font-bold">Company</h1>
+          <a href="#" class="text-gray-400">About</a>
+          <a href="#" class="text-gray-400">Jobs</a>
+          <a href="#" class="text-gray-400">For the Record</a>
+      </article>
+
+      <article class="grid text-center md:mt-0 mt-3">
+        <h1 class="text-xl font-bold">Communities</h1>
+        <a href="#" class="text-gray-400">For Artists</a>
+        <a href="#" class="text-gray-400">Developers</a>
+        <a href="#" class="text-gray-400">Advertising</a>
+        <a href="#" class="text-gray-400">Investor</a>
+      </article>
+
+      <article class="grid text-center  md:mt-0 mt-3">
+        <h1 class="text-xl font-bold">Useful links</h1>
+        <a href="#" class="text-gray-400">Support</a>
+        <a href="#" class="text-gray-400">Free Mobile App</a>
+       </article>
+
+      <article class="grid text-center  md:mt-0 mt-3">
+        <h1 class="text-xl font-bold">Spotify Plans</h1>
+        <a href="#" class="text-gray-400">Premium Individual</a>
+        <a href="#" class="text-gray-400">Premium Duo</a>
+        <a href="#" class="text-gray-400">Premium Family</a>
+        <a href="#" class="text-gray-400">Spotify Free</a>
+      </article>
+  </footer>
+
+  <h1 class="text-center mt-2">&copy;All rights reserved by Spotify</h1>
+
+  <script>
+    const song = document.getElementById("song");
+    const progress = document.getElementById("progress");
+    const ctrlIcon = document.getElementById("ctrlIcon");
+    const currentTime = document.getElementById("currentTime");
+    const totalTime = document.getElementById("totalTime");
+
+    // Playlist with track details
+    const playlist = [
+      {
+        src: "media/Babastars.mp3",
+        title: "High 2",
+        artist: "Babastars",
+        img: "media/unikatil.jpg"
+      },
+      {
+        src: "media/Geasy x Majk - MARI.mp3",
+        title: "Mari",
+        artist: "Geasy x Majk",
+        img: "media/unikatil.jpg"
+      },
+      {
+        src: "media/GEASY x INVA MULA x MC KRESHA - JEMNJO.mp3",
+        title: "Jem Njo",
+        artist: "Geasy x Inva Mula",
+        img: "media/unikatil.jpg"
+      },
+      {
+        src: "media/Cozman - Shpresoj.mp3",
+        title: "Shpresoj",
+        artist: "Cozman",
+        img: "media/unikatil.jpg"
+      },
+      {
+        src: "media/GEASY - MARGET.mp3",
+        title: "Marget",
+        artist: "Geasy",
+        img: "media/unikatil.jpg"
+      },
+    ];
+
+    let currentTrackIndex = 0;
+
+    // Load a track based on index
+    function loadTrack(index) {
+      const track = playlist[index];
+      song.src = track.src;
+      document.querySelector(".song-title").textContent = track.title;
+      document.querySelector(".artist").textContent = track.artist;
+      document.querySelector(".music-player img").src = track.img;
+      song.load();
+      // Optionally auto-play the track
+      playPause();
+    }
+
+    // When the metadata is loaded, update the progress bar maximum and total time
+    song.onloadedmetadata = () => {
+      progress.max = song.duration;
+      totalTime.textContent = formatTime(song.duration);
+    };
+
+    // Toggle play/pause state
+    function playPause() {
+      if (song.paused) {
+        song.play();
+        ctrlIcon.classList.remove("fa-play");
+        ctrlIcon.classList.add("fa-pause");
+      } else {
+        song.pause();
+        ctrlIcon.classList.remove("fa-pause");
+        ctrlIcon.classList.add("fa-play");
+      }
+    }
+
+    // Update progress bar and current time display as song plays
+    song.ontimeupdate = () => {
+      progress.value = song.currentTime;
+      currentTime.textContent = formatTime(song.currentTime);
+    };
+
+    // Allow seeking by updating currentTime when the progress bar is changed
+    progress.oninput = () => {
+      song.currentTime = progress.value;
+    };
+
+    // Format time (in seconds) to MM:SS
+    function formatTime(time) {
+      let minutes = Math.floor(time / 60);
+      let seconds = Math.floor(time % 60);
+      if (seconds < 10) seconds = "0" + seconds;
+      return `${minutes}:${seconds}`;
+    }
+
+    // Navigate to the next track
+    document.getElementById("nextBtn").addEventListener("click", () => {
+      currentTrackIndex = (currentTrackIndex + 1) % playlist.length;
+      loadTrack(currentTrackIndex);
+    });
+
+    // Navigate to the previous track
+    document.getElementById("prevBtn").addEventListener("click", () => {
+      currentTrackIndex = (currentTrackIndex - 1 + playlist.length) % playlist.length;
+      loadTrack(currentTrackIndex);
+    });
+
+    // Listen for the right arrow key press to skip to the next track
+    document.addEventListener("keydown", function(event) {
+      if (event.key === "ArrowRight") {
+        currentTrackIndex = (currentTrackIndex + 1) % playlist.length;
+        loadTrack(currentTrackIndex);
+      }
+    });
+  </script>
+</body>
+</html>
+
+</body>
+</html>

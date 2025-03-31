@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/logo.png">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <title>Spotify</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="flex justify-between ml-10 mr-10">
+        <!-- Adding Logo -->
+        <img src="images/logo.png" alt="Spotify" class="w-10 h-10 mt-5">
+    <div class="flex gap-10 md:flex hidden">
+        <svg class="home-logo cursor-pointer" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+        </svg>
+        <div class="input-box">
+            <svg class="w-6 h-6 absolute mt-6 ml-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+            </svg>              
+            <input type="search" placeholder="What do you want to play?" class="w-80 h-10 mt-4 border-2 rounded-full px-10 cursor-pointer">
+        </div>
+    </div>
+    <div class="md:flex gap-5 hidden">    
+        <svg  class="w-6 h-6 mt-6 cursor-pointer" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
+        </svg>
+        <h1 class="text-gray-400 text-xl mt-6"><a href="https://www.spotify.com/us/download/ios/" target="_blank">Install App</a></h1>
+    </div>
+
+    <div class="flex md:hidden">
+        <button class="app-btn">Open App</button>
+    </div>
+
+    <div class="flex gap-5">
+        <svg class="w-6 h-6 mt-6 cursor-pointer hidden md:flex" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0" />
+        </svg>
+        <h1 class="header-h1 shadow-md mt-3 cursor-pointer"><a href="https://open.spotify.com/" target="_blank">S</a></h1>  
+    </div>
+    <div class="md:hidden block">
+        <svg class="w-8 h-8 mt-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+          </svg>
+     </div>
+    </header>
+
+    <section class="md:hidden grid premium mt-5">
+        <h1 class="text-3xl font-bold mt-5 text-black ml-3 mr-3">Get Premium</h1>
+        <p class="text-black ml-3 mr-3">Lorem ipsum dolor sit amet consectetur adipisicing elit.<br>Lorem, ipsum dolor.</p>
+        <button class="premium-btn ml-3 mr-3">Get Premium</button>
+    </section>
+
+    <!-- MAIN SECTION -->
+    <main class="flex gap-5">
+        <!-- SideBar -->
+        <section class="md:grid hidden ml-10 left-side px-10 rounded mt-10 absolute">
+           <header class="flex justify-around mt-20">
+            <div class="flex gap-2">
+              <svg class="w-8 h-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25" />
+              </svg>
+              <h1 class="text-gray-400 text-2xl font-bold">Your Library</h1>
+            </div>
+              <button class="rounded-full font-bold px-5 py-1 create-btn ml-10">+Create</button>
+
+              <svg class="w-8 h-8 ml-5 mt-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+              </svg>
+            </header>
+
+            <header class="flex gap-5 mt-5">
+                <button class="playlist-btn">PlayList</button>
+                <button class="artist-btn">Artists</button>
+            </header>
+            
+            <header class="flex justify-between mt-7">
+                <svg class="w-7 h-7" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+                </svg>
+                <div class="flex gap-5">
+                    <h1 class="text-gray-400 text-xl font-bold">Recents</h1>
+                    <svg class="w-7 h-7" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    </svg>
+                </div>          
+            </header>
+
+            <article class="grid mt-10">
+                <div class="flex gap-5">
+                    <svg class="w-12 h-12" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0 1 11.186 0Z" />
+                    </svg>                       
+                    <div>
+                      <h1 class="text-white font-bold">Liked Songs</h1>
+                      <span class="text-gray-400">Playlist ~ 1 song</span>
+                    </div>
+                </div>
+                <!-- UNIKATIL -->
+                <a href="/UNIKATIL/unikatil.html" target="_blank">
+                <div class="flex gap-5 mt-5 cursor-pointer">
+                    <img src="images/unikatil.jpg" alt="Unikatil" class="rounded-full w-12 h-12">                      
+                    <div>
+                      <h1 class="text-white font-bold">Unikatil</h1>
+                      <span class="text-gray-400">Artist</span>
+                    </div>
+                </div>
+                </a>
+                <!-- Babastars -->
+                <a href="/Babastars/index.html" target="_blank">
+                <div class="flex gap-5 mt-5">
+                    <img src="images/babastart.jpg" alt="Babastars" class="rounded-full w-12 h-12">                      
+                    <div>
+                      <h1 class="text-white font-bold">Babastars</h1>
+                      <span class="text-gray-400">Artist</span>
+                    </div>
+                </div>
+                </a>
+                <!-- Playboi Carti -->
+                <a href="/Carti/index.html" target="_blank">
+                <div class="flex gap-5 mt-5">
+                    <img src="images/playboi.jpg" alt="Playboi" class="rounded-full w-12 h-12">                      
+                    <div>
+                      <h1 class="text-white font-bold">PlayBoi Carti</h1>
+                      <span class="text-gray-400">Artist</span>
+                    </div>
+                </div>
+                </a>
+                <!-- Noizy -->
+                <a href="/Noizy/index.html" target="_blank">
+                <div class="flex gap-5 mt-5 mb-8">
+                    <img src="images/noizy.jpg" alt="Noizy" class="rounded-full w-12 h-12">                      
+                    <div>
+                      <h1 class="text-white font-bold">Noizy</h1>
+                      <span class="text-gray-400">Artist</span>
+                    </div>
+                </div>
+                </a>
+            </article>
+
+            <section>
+                <h1 class="text-white font-bold text-3xl">Albums featuring songs <br> you like</h1>
+            <article class="flex gap-10">
+                  <div class="mt-5 mb-5">
+                    <img src="images/shaqiri.jpg" alt="" class="rounded w-40 h-40">
+                    <p class="mt-2 text-2xl font-bold">E di nje kenge</p>
+                    <p class="text-gray-400 text-sm">ILIRE SHAQIRI</p>
+                  </div>
+                  <div class="mt-5 mb-5">
+                    <img src="images/dafina.jpg" alt="" class="rounded w-40 h-40">
+                    <p class="mt-2 text-2xl font-bold">The Absolute</p>
+                    <p class="text-gray-400 text-sm">Dafina Zeqiri</p>
+                  </div>
+            </article>
+            <article class="flex gap-10 mt-1">
+                <div class="mt-5 mb-5">
+                  <img src="images/jbmqtr.jpg" alt="" class="rounded w-40 h-40">
+                  <p class="mt-2 text-2xl font-bold">ALBANIAAA</p>
+                  <p class="text-gray-400 text-sm">Various Artists</p>
+                </div>
+                <div class="mt-5 mb-5">
+                  <img src="images/darek.jpg" alt="" class="rounded w-40 h-40">
+                  <p class="mt-2 text-2xl font-bold">Scorpion</p>
+                  <p class="text-gray-400 text-sm">Drake</p>
+                </div>
+            </article>
+            </section>
+        </section>
+
+        <section class="md:ml-130 left-side py-5 rounded mt-10 ">
+            <div class="flex gap-10 ml-5">
+              <button class="active">All</button>
+              <button class="music-btn">Music</button>
+              <button class="podcast-btn">Podcasts</button>
+            </div>
+
+            <article class="md:flex hidden mt-10 ml-5 gap-15 mr-5">
+                <!-- UNIKATIL -->
+                <div class="flex unikatil">
+                    <img src="images/play.jpg" alt="PlayButton" class="w-8 h-8 absolute mt-2 md:ml-55 ml-45">
+                    <img src="images/unikatil.jpg" alt="Unikatil" class="w-12 h-12 rounded">
+                    <h1 class="w-50 ml-5 mt-3 font-bold text-white">Unikatil</h1>
+                </div>
+                <!-- UCK VIBES -->
+                <div class="flex unikatil">
+                    <img src="images/play.jpg" alt="PlayButton" class="w-8 h-8 absolute mt-2 md:ml-55 ml-45">
+                    <img src="images/uck.png" alt="UCK" class="w-12 h-12 rounded">
+                    <h1 class="w-50 ml-5 mt-3 font-bold text-white">UCK Vibes</h1>
+                </div>
+                <!-- MIX -->
+                <div class="flex unikatil">
+                    <img src="images/play.jpg" alt="PlayButton" class="w-8 h-8 absolute mt-2 md:ml-55 ml-45">
+                    <img src="images/duo.jpg" alt="Duo" class="w-12 h-12 rounded">
+                    <h1 class="w-50 ml-5 mt-3 font-bold text-white">Daily Mix</h1>
+                </div>
+            </article>
+
+            <article class="md:flex hidden mt-10 ml-5 gap-15 mr-5">
+                <!-- HITET E VJETRA SHQIP -->
+                <div class="flex unikatil">
+                    <img src="images/play.jpg" alt="PlayButton" class="w-8 h-8 absolute mt-2 md:ml-55 ml-45">
+                    <img src="images/old.jpg" alt="Hitet E Vjetra Shqip" class="w-12 h-12 rounded">
+                    <h1 class="w-50 ml-5 mt-3 font-bold text-white">Hitet e Vjetra Shqip</h1>
+                </div>
+
+                <div class="flex unikatil">
+                    <img src="images/play.jpg" alt="PlayButton" class="w-8 h-8 absolute mt-2 md:ml-55 ml-45">
+                    <img src="images/armiqt.jpg" alt="Armiqt" class="w-12 h-12 rounded">
+                    <h1 class="w-50 ml-5 mt-3 font-bold text-white">Armiqt Suprem</h1>
+                </div>
+
+                <div class="flex unikatil">
+                    <img src="images/play.jpg" alt="PlayButton" class="w-8 h-8 absolute mt-2 ml-55">
+                    <img src="images/patriotike.jpg" alt="Duo" class="w-12 h-12 rounded">
+                    <h1 class="w-50 ml-5 mt-3 font-bold text-white">Kenge Patriotike</h1>
+                </div>
+            </article>
+
+            <!-- MADE FOR SYLEJMAN -->
+            <article class="mt-9 ml-5 mr-5">
+                <h1 class="text-white font-bold text-3xl">Made For Sylejman Durguti</h1>
+            <div class="overflow-x-auto">
+              <div class="md:flex grid justify-around">
+                <div class="mt-5">
+                    <img src="images/noizy.jpg" alt="Noizy" class="rounded">
+                    <p class="text-gray-400 text-center mt-2 text-sm">Noizy, Unikatil, Big <br> Basta and more...</p>
+                </div>
+                <!-- TRADITINAL -->
+                <div class="mt-5">
+                    <img src="images/ilir.jpg" alt="Noizy" class="rounded">
+                    <p class="text-gray-400 text-center mt-2 text-sm">Ilir Shaqiri, Sabri <br> Fejzullahu, Flora Gashi...</p>
+                </div>
+                <!-- XXTENTACION -->
+                <div class="mt-5">
+                    <img src="images/xxtentacion.jpg" alt="Xxtentacion" class="rounded h-55 w-48">
+                    <p class="text-gray-400 text-center mt-2 text-sm">Xxtentacion, Kid Laroi, Lil <br> Teca and more...</p>
+                </div>
+
+                <div class="mt-5">
+                    <img src="images/capital.jpg" alt="Xxtentacion" class="rounded h-55 w-48">
+                    <p class="text-gray-400 text-center mt-2 text-sm">Catch all the latest music<br>from artists you follow...</p>
+                </div>
+              </div>
+            </div>
+            </article>
+
+            <!-- RECOMMENDED -->
+            <article class="mt-9 ml-5 mr-5">
+                <h1 class="text-white font-bold text-3xl">Recommended for today</h1>
+            <div class="overflow-x-auto">
+              <div class="md:flex grid justify-around">
+                <div class="mt-5">
+                    <img src="images/shoki.jpg" alt="Don Xhon" class="rounded">
+                    <p class="text-center mt-2">SHOKI</p>
+                    <p class="text-gray-400 text-center text-sm">Don Xhoni</p>
+                </div>
+                <!-- 6 AM -->
+                <div class="mt-5">
+                    <img src="images/pull.jpg" alt="6am" class="rounded">
+                    <p class="text-center mt-2">Pull Up</p>
+                    <p class="text-gray-400 text-center text-sm">6 AM</p>
+                </div>
+                <!-- TAYNA -->
+                <div class="mt-5">
+                    <img src="images/tayna.jpg" alt="TAYNA" class="rounded h-55 w-48">
+                    <p class="text-center mt-2">O Jete</p>
+                    <p class="text-gray-400 text-center text-sm">Tayna & Ardian Bujupi</p>
+                </div>
+
+                <div class="mt-5">
+                    <img src="images/pse.jpg" alt="Pse" class="rounded h-55 w-48">
+                    <p class="text-center mt-2">Pse?</p>
+                    <p class="text-gray-400 text-center text-sm">Xhoni Beats</p>
+                </div>
+              </div>
+            </div>
+            </article>
+
+            <!-- RECENTLY PLAYED -->
+            <article class="mt-9 ml-5 mr-5">
+                <h1 class="text-white font-bold text-3xl">Recently Played</h1>
+              <div class="md:flex grid justify-between">
+                <div class="mt-5 ml-2">
+                    <img src="images/old.jpg" alt="Hitet e Vjetra" class="rounded w-20 h-20">
+                    <p class="mt-2">Hitet e Vjetra <br> Shqip</p>
+                </div>
+                <!-- UCK-->
+                <div class="mt-5">
+                    <img src="images/uck(1).jpg" alt="Uck" class="rounded w-20 h-20">
+                    <p class="mt-2">UCK Vibe</p>
+                </div>
+                <!-- TAYNA -->
+                <div class="mt-5">
+                    <img src="images/duo.jpg" alt="Daily" class="rounded  w-20 h-20">
+                    <p class="mt-2">Daily Mix 2</p>
+                </div>
+                <!-- UNIKATIL -->
+                <div class="mt-5">
+                    <img src="images/unikatil.jpg" alt="Unikatil" class="rounded-full  w-20 h-20">
+                    <p class="text-center mt-2">Unikatil</p>
+                </div>
+                <!-- UNIKATIL -->
+                <div class="mt-5">
+                    <img src="images/xxtentacion.jpg" alt="Unikatil" class="rounded w-20 h-20">
+                    <p class="text-center mt-2">Xx</p>
+                </div>
+              </div>
+            </div>
+            </article>
+        </section>
+    </main>
+
+    <footer class="md:flex grid justify-around mt-20 md:mt-20 mt-3">
+        <article class="grid text-center">
+            <h1 class="text-xl font-bold">Company</h1>
+            <a href="#" class="text-gray-400">About</a>
+            <a href="#" class="text-gray-400">Jobs</a>
+            <a href="#" class="text-gray-400">For the Record</a>
+        </article>
+  
+        <article class="grid text-center  md:mt-0 mt-3">
+          <h1 class="text-xl font-bold">Communities</h1>
+          <a href="#" class="text-gray-400">For Artists</a>
+          <a href="#" class="text-gray-400">Developers</a>
+          <a href="#" class="text-gray-400">Advertising</a>
+          <a href="#" class="text-gray-400">Investor</a>
+        </article>
+  
+        <article class="grid text-center  md:mt-0 mt-3">
+          <h1 class="text-xl font-bold">Useful links</h1>
+          <a href="#" class="text-gray-400">Support</a>
+          <a href="#" class="text-gray-400">Free Mobile App</a>
+         </article>
+  
+        <article class="grid text-center  md:mt-0 mt-3">
+          <h1 class="text-xl font-bold">Spotify Plans</h1>
+          <a href="#" class="text-gray-400">Premium Individual</a>
+          <a href="#" class="text-gray-400">Premium Duo</a>
+          <a href="#" class="text-gray-400">Premium Family</a>
+          <a href="#" class="text-gray-400">Spotify Free</a>
+        </article>
+    </footer>
+  
+    <h1 class="text-center mt-2">&copy;All rights reserved by Spotify</h1>
+</body>
+</html>

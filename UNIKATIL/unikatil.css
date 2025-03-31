@@ -1,0 +1,98 @@
+/* Body background, text color handled in Tailwind, but you can keep this */
+body {
+    background-color: rgb(10, 10, 10);
+    color: white;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .header-h1 {
+    background-color: rgb(85, 193, 85);
+    border-radius: 100px;
+    padding: 10px 20px;
+    font-weight: bold;
+    color: black;
+    display: inline-block;
+  }
+  
+  /* Music player custom styling */
+  .music-player {
+    background: linear-gradient(360deg, #ff989805, #ff92a19f);
+    border-radius: 25px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .song-title {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 5px;
+  }
+  
+  .artist {
+    font-size: 14px;
+    color: #aaa;
+    margin-bottom: 15px;
+  }
+  
+  .progress-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 12px;
+    color: #ff92a19f;
+    margin-bottom: 10px;
+  }
+  
+  .progress-bar {
+    width: 100%;
+    margin: 5px 0;
+    appearance: none;
+    background: #fff;
+    height: 3px;
+    outline: none;
+    cursor: pointer;
+  }
+  
+  .controls {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 15px 0;
+  }
+  
+  .controls button {
+    background: white;
+    border: none;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    font-size: 18px;
+    color: #ff4d6d;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .controls button:hover {
+    transform: scale(1.1);
+  }
+  
+  .header{
+    background: linear-gradient(360deg, #92adff9f, #ff989805);
+  }
+
+  .follow-btn{
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    background-color: rgb(56, 51, 51);
+    padding: 5px 20px;
+    border-radius: 20px;
+}
+
+.follow-btn:hover{
+    background-color: rgb(58, 58, 58);
+}
